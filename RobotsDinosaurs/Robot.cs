@@ -11,57 +11,61 @@ namespace RobotsDinosaurs
         public string name;
         public int memory;
         public int batteryPercentageFull;
-        public Weapon weapon;
+        public Weapon botWeapon;
         public int attackForce;
-        public int speed;
+        
         //constuctor (spawner)
-        public Robot()
+        public Robot(string roboName)
         {
-            name = "Destroyer Bot";
-            memory = 10000;
-            batteryPercentageFull = 100;
-            attackForce = 1000;
-            speed = 100;
+            name = roboName;
+            memory = 1000; //same as health
+            batteryPercentageFull = 100; //same as power level
+            attackForce = 100;
+            botWeapon = new Weapon(); 
         }
-        //member methods (Can Do)
-        //robot attacks
-         public void  Attack() 
+        public void AttackDino()
         {
-            
 
-             batteryPercentageFull -= 10;
         }
+        //public void LossOfBatteryPercentFull()
+        //{
+        //    batteryPercentageFull -= 10;
+
+        //}
 
 
         //choose a weapon from weapon list
-        public void SelectWeapon() 
-        {
-            Console.WriteLine("Please select your weapon of attack. Choose 1 for Chain Saw 2 for Laser Beam or 3 for Electrocute");
-           int input = Convert.ToInt32(Console.ReadLine());
-            switch(input)
-            {
-                case 1:
-                    weapon = new Weapon("chain saw");
-                    break;
-                case 2:
-
-               
-
-            }
-        }
-
-        //outsmart the enemy..find weakness
-       
-       //reboot health
-      //  public void Rest() 
-       // {
-        
+        //public void SelectWeapon() 
+        //{
+        //    botWeapon = new Weapon();
         //}
-        //escape
-      //  public void Escape() 
-      //  {
         
-        }
+
+        //Console.WriteLine("Please select your weapon of attack. Choose 1 for Chain Saw 2 for Laser Beam or 3 for Electrocute");
+        //   int input = Convert.ToInt32(Console.ReadLine());
+        //    switch(input)
+        //    {
+        //        case 1:
+        //weapon = new Weapon("chain saw");
+        //            break;
+        //        case 2:
+        //            weapon = new Weapon("");
+        //                break;
+
+
+    }
+    //outsmart the enemy..find weakness
+
+    //reboot health
+    //  public void Rest() 
+    // {
+
+    //}
+    //escape
+    //  public void Escape() 
+    //  {
+
+}
         //defend
         //public void Defend() 
         //{
@@ -71,14 +75,14 @@ namespace RobotsDinosaurs
        // public void Help() 
        //
 
-        public string PowerUp() 
-        {
-            Console.WriteLine("Ready to battle?)
-               battery = Console.ReadLine();
-        }
+        //public string PowerUp() 
+        //{
+        //    Console.WriteLine("Ready to battle?)
+        //       battery = Console.ReadLine();
+        //}
 
 
 
-    }
+    //}
 
 

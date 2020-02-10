@@ -8,27 +8,29 @@ namespace RobotsDinosaurs
 {
     class Weapon
     {
-        string[] weaponNames;
-        public string weapontype;
+        public string weaponName;
+        public int weaponPower;
 
         //constuctor (spawner)
-        public Weapon(string type)
+        public Weapon()
         {
-            weaponNames = new string [6] { "Smash", "Bite", "Claw", "Chain Saw","Laser Beam","Electrocute", };  
-            int [] damageDone = new int[6] { 30, 20, 10, 30, 20, 10, } ;
-            int [] remainingUses = new int[1] { 10 };
-
-            weapontype = type;
-            
+            weaponName ="laser";
+            weaponPower = 100 ;
+            //int  remainingUses = new int[1] { 10 };
+                              
         }
+        //public void Attack()
+        //{
+        //    weaponPower 
+        //}
         //member methods (Can Do)
         //robot attacks
-        public void DisplayWeapon()
-        {
-           // Console.WriteLine("Select a weapon );
-           //yourWeapon = 
+        //public void DisplayWeapon()
+        //{
+        //   // Console.WriteLine("Select a weapon );
+        //   //yourWeapon = 
 
-        }
+        //}
 
 
         

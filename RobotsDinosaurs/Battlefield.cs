@@ -9,32 +9,111 @@ namespace RobotsDinosaurs
     class Battlefield
     {
         
-        int playerOneScore;
-        int playerTwoScore;
-        Random rnd = new Random();
+        public Fleet fleet;
+        public Herd herd;
+        //Random rnd = new Random();
 
-        
+
         public Battlefield()
         {
-            playerOneScore = 0;
-            playerTwoScore = 0;
+            fleet = new Fleet ();
+            herd = new Herd ();
+           
         }
-       
-        public int Fight()
+        public void DinoAttack()
         {
-            int result;
-
-
-            result = rnd.Next(1, 7);
-
-            return result;
-
-
-        }
+            int damageToRobot = fleet.robots[0].memory - herd.dinosaurs[0].attackForce;
 
         
-
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         }
+        
+        //fleet.AttackDino
+
+
+
+        //public int Attack()
+        //{
+        //    //int result;
+
+
+        //    //result = rnd.Next(1, 7);
+
+        //    //return result;
+
+
+        //}
+
+
+
+
+
     }
 }

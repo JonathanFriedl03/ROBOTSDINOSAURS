@@ -9,29 +9,28 @@ namespace RobotsDinosaurs
     class Dinosaur
     {
 
-        public string name;
+        public string typeOFDino;
         public int health;
         public int powerLevelPercent;
-        public string weapon;
         public int attackForce;
         
         //constuctor (spawner)
-        public Dinosaur()
+        public Dinosaur(string dinoName)
         {
-            name = "T Rex";
-            health = 10000;
-            powerLevelPercent = 100;
-            weapon = "";
-            attackForce = 1000;
+            typeOFDino = dinoName;
+            health = 1000;
+            powerLevelPercent = 100;//same as energy
+            attackForce = 100;
            
         }
         //member methods (Can Do)
         //robot attacks
-        public void Attack()
-        {
-          powerLevelPercent -= 10;
-        }
+        
+        //public void LossOfPowerLevelPercent()
+        //{
+        //  powerLevelPercent -= 10;
 
+        //}
 
         //choose a weapon
         //public void SelectWeapon()
@@ -67,10 +66,10 @@ namespace RobotsDinosaurs
 
         //}
 
-        public string PowerUp()
-        {
-            Console.WriteLine("Ready to battle?)
-               battery = Console.ReadLine();
-        }
+        //public string PowerUp()
+        //{
+        //    Console.WriteLine("Ready to battle?)
+        //       battery = Console.ReadLine();
+        //}
     }
 }
