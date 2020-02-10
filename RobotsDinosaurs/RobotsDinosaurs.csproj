@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Battlefield.cs" />
     <Compile Include="BattlefieldScore.cs" />
-    <Compile Include="ChoosePlayer.cs" />
+    <Compile Include="Fighters.cs" />
     <Compile Include="Dinosaur.cs" />
     <Compile Include="Fleet.cs" />
     <Compile Include="Herd.cs" />

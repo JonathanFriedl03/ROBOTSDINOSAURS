@@ -10,61 +10,62 @@ namespace RobotsDinosaurs
     {
 
         public string name;
-        public string height;
-        public int memory;
-        public bool battery;
+        public int health;
+        public int powerLevelPercent;
         public string weapon;
         public int attackForce;
-        public int speed;
+        
         //constuctor (spawner)
         public Dinosaur()
         {
             name = "T Rex";
-            height = "30 ft";
-            memory = 1000;
-            battery = false;
-            weapon = "bite";
+            health = 10000;
+            powerLevelPercent = 100;
+            weapon = "";
             attackForce = 1000;
-            speed = 25;
+           
         }
         //member methods (Can Do)
         //robot attacks
         public void Attack()
         {
-
+          powerLevelPercent -= 10;
         }
 
 
         //choose a weapon
-        public void SelectWeapon()
-        {
+        //public void SelectWeapon()
+        //{
+        //    Console.WriteLine("Please select your weapon of attack. Choose 1 for Chain Saw 2 for Laser Beam or 3 for Electrocute");
+        //    string input = Convert.ToInt32(Console.ReadLine());
+        //    switch (input)
+        //    {
+        //        case 1:
+        //        case 1.:
+        //            Weapon =
 
-        }
-        //outsmart the enemy
-        public void OutSmart()
-        {
-
-        }
+        //    }
+        //}
         //reboot health
-        public void Rest()
-        {
+        //public void Rest()
+        //{
 
-        }
+        //}
         //escape
-        public void Escape()
-        {
+        //public void Escape()
+        //{
 
-        }
+        //}
         //defend
-        public void Defend()
-        {
+        //public void Defend()
+        //{
 
-        }
+        //}
         //call for help
-        public void Help()
-        {
+        //public void Help()
+        //{
 
-        }
+        //}
 
         public string PowerUp()
         {

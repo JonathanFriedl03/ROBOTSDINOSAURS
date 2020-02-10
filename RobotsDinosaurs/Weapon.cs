@@ -8,68 +8,29 @@ namespace RobotsDinosaurs
 {
     class Weapon
     {
+        string[] weaponNames;
+        public string weapontype;
 
-        public string name;
-        public int height;
-        public int memory;
-        public bool battery;
-        public string weapon;
-        public int attackForce;
-        public int speed;
         //constuctor (spawner)
-        public Robot()
+        public Weapon(string type)
         {
-            name = "Destroyer";
-            height = 1000;
-            memory = 1000;
-            battery = false;
-            weapon = "blade";
-            attackForce = 1000;
-            speed = 100;
+            weaponNames = new string [6] { "Smash", "Bite", "Claw", "Chain Saw","Laser Beam","Electrocute", };  
+            int [] damageDone = new int[6] { 30, 20, 10, 30, 20, 10, } ;
+            int [] remainingUses = new int[1] { 10 };
+
+            weapontype = type;
+            
         }
         //member methods (Can Do)
         //robot attacks
-        public void Attack()
+        public void DisplayWeapon()
         {
+           // Console.WriteLine("Select a weapon );
+           //yourWeapon = 
 
         }
 
 
-        //choose a weapon
-        public void SelectWeapon()
-        {
-
-        }
-        //outsmart the enemy
-        public void OutSmart()
-        {
-
-        }
-        //reboot health
-        public void Rest()
-        {
-
-        }
-        //escape
-        public void Escape()
-        {
-
-        }
-        //defend
-        public void Defend()
-        {
-
-        }
-        //call for help
-        public void Help()
-        {
-
-        }
-
-        public string PowerUp()
-        {
-            Console.WriteLine("Ready to battle?)
-               battery = Console.ReadLine();
-        }
+        
     }
 }

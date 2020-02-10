@@ -9,61 +9,67 @@ namespace RobotsDinosaurs
     class Robot
     {
         public string name;
-        public string height;
         public int memory;
-        public bool battery;
-        public string weapon;
+        public int batteryPercentageFull;
+        public Weapon weapon;
         public int attackForce;
         public int speed;
         //constuctor (spawner)
         public Robot()
         {
-            name = "Destroyer";
-            height = "5 feet";
-            memory = 1000;
-            battery = false;
-            weapon = "blade";
+            name = "Destroyer Bot";
+            memory = 10000;
+            batteryPercentageFull = 100;
             attackForce = 1000;
             speed = 100;
         }
         //member methods (Can Do)
         //robot attacks
-        public void Attack() 
-        {
-        
-        }
-
-
-        //choose a weapon
-        public void SelectWeapon() 
+         public void  Attack() 
         {
             
+
+             batteryPercentageFull -= 10;
         }
+
+
+        //choose a weapon from weapon list
+        public void SelectWeapon() 
+        {
+            Console.WriteLine("Please select your weapon of attack. Choose 1 for Chain Saw 2 for Laser Beam or 3 for Electrocute");
+           int input = Convert.ToInt32(Console.ReadLine());
+            switch(input)
+            {
+                case 1:
+                    weapon = new Weapon("chain saw");
+                    break;
+                case 2:
+
+               
+
+            }
+        }
+
         //outsmart the enemy..find weakness
-        public void OutSmart() 
-        {
+       
+       //reboot health
+      //  public void Rest() 
+       // {
         
-        }
-        //reboot health
-        public void Rest() 
-        {
-        
-        }
+        //}
         //escape
-        public void Escape() 
-        {
+      //  public void Escape() 
+      //  {
         
         }
         //defend
-        public void Defend() 
-        {
-        
-        }
+        //public void Defend() 
+        //{
+            
+        //}
         //call for help
-        public void Help() 
-        {
-        
-        }
+       // public void Help() 
+       //
 
         public string PowerUp() 
         {
@@ -76,89 +82,3 @@ namespace RobotsDinosaurs
     }
 
 
-    class Clock
-        {
-            //memeber variables (Has A)
-            public string time;
-            public bool alarmStatus;
-            public string alarmTime;
-            public string date;
-
-
-            //constuctor (spawner)
-            public Clock()
-        {
-            time = "12:00am";
-            alarmStatus = false;
-            alarmTime = null;
-            date = "01/01/0001";
-        }
-        //member methods (Can Do)
-        public void Initialize()
-        {
-            ChangeTime();
-            ChangeDate();
-            AlarmSetup();
-        }
-        public void ChangeTime()
-        {
-            Console.WriteLine("Please enter the new time: ");
-            time = Console.ReadLine();
-        }
-        public void ChangeDate()
-        {
-            Console.WriteLine("Please enter the new Date: ");
-            date = Console.ReadLine();
-        }
-        public void AlarmSetup()
-        {
-            bool isValid = false;
-            int numberOfWrong = 0;
-            do
-            {
-                Console.WriteLine("Would you like to set up an alarm?");
-                string input = Console.ReadLine();
-                switch (input)
-                {
-                    case "Yeah":
-                    case "Yup":
-                    case "yup":
-                    case "Yes":
-                    case "yes":
-                        ToggleAlarm();
-                        SetAlarm();
-                        isValid = true;
-                        break;
-                    case "no":
-                        Console.WriteLine("You can set an alarm later");
-                        isValid = true;
-                        break;
-                    default:
-                        Console.WriteLine("Please enter a confirmation");
-                        numberOfWrong++;
-                        break;
-                }
-            } while (isValid == false && numberOfWrong < 5);
-        }
-        public void ToggleAlarm()
-        {
-            alarmStatus = !alarmStatus;
-        }
-        public void SetAlarm()
-        {
-            Console.WriteLine("Please enter the new alarm time: ");
-            alarmTime = Console.ReadLine();
-        }
-        public void DisplayTime()
-        {
-            Console.WriteLine("The current time is: " + time);
-        }
-        public void DisplayDate()
-        {
-            Console.WriteLine("The current date is: " + date);
-        }
-
-
-
-    }
-}

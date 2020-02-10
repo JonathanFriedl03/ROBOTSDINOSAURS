@@ -9,23 +9,11 @@ namespace RobotsDinosaurs
     class Herd
     {
 
-        public string name;
-        public int height;
-        public int memory;
-        public bool battery;
-        public string weapon;
-        public int attackForce;
-        public int speed;
+       
         //constuctor (spawner)
-        public Robot()
+        public Herd()
         {
-            name = "Destroyer";
-            height = 1000;
-            memory = 1000;
-            battery = false;
-            weapon = "blade";
-            attackForce = 1000;
-            speed = 100;
+            
         }
         //member methods (Can Do)
         //robot attacks
