@@ -20,6 +20,7 @@ namespace RobotsDinosaurs
             herd = new Herd ();
            
         }
+        
         public void DinoAttack()
         {
             int damageToRobot = fleet.robots[0].memory - herd.dinosaurs[0].attackForce;

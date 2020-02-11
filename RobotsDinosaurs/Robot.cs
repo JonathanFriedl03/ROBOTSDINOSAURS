@@ -25,7 +25,7 @@ namespace RobotsDinosaurs
         }
         public void AttackDino()
         {
-
+            attack = 
         }
         //public void LossOfBatteryPercentFull()
         //{
